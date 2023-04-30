@@ -58,3 +58,4 @@ function createNewFile(fileName, data) {
     });
 }
 
+// need to run tests for certain conditions (hexidecimal numbers, validate input, etc)
