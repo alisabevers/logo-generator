@@ -1,6 +1,5 @@
 const inquirer = require('inquirer');
 const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt');
-// const jest = require('jest');
 const fs = require('fs');
 
 inquirer.registerPrompt('maxlength-input', MaxLengthInputPrompt);
@@ -17,7 +16,6 @@ inquirer
         type: 'input',
         message: 'Please enter a color (or hexidecimal number) for your text.',
         name: 'textColor',
-        // need to validate user input
     },
     {
         type: 'list',
@@ -54,8 +52,6 @@ function createNewFile(fileName, data) {
         if (err) {
             console.log(err)
         }
-        console.log('Your LOGO.svg file was generated!');
+        console.log('Generated logo.svg');
     });
 }
-
-// need to run tests for certain conditions (hexidecimal numbers, validate input, etc)
