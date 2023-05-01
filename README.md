@@ -14,4 +14,4 @@ You will need the following NPM libraries for this to run:
 * Jest
 
 ## Instructions
-After installing the required libraries, run the command ```node index.js" and answer the questions that are presented. Once the questions are answered, you should see a newly generated file appear. Open the SVG file's live server to view your new logo.
+After installing the required libraries, run the command ```node index.js``` and answer the questions that are presented. Once the questions are answered, you should see a newly generated file appear. Open the SVG file's live server to view your new logo.
