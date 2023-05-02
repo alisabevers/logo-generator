@@ -35,13 +35,13 @@ inquirer
 .then(({ chars, textColor, shape, shapeColor }) => {
     switch (shape) {
         case 'circle':
-            shapeSvg = `<circle cx="150" cy="100" r="80" fill="${shapeColor}" />`;
+            shapeSvg = `<circle cx="150" cy="100" r="80"`;
             break;
         case 'triangle':
-            shapeSvg = `<polygon points="75,25 25,175 175,175" fill="${shapeColor}" />`;
+            shapeSvg = `<polygon points="75,25 25,175 175,175"`;
             break;
         case 'square':
-            shapeSvg = `<rect x="75" y="50" width="150" height="100" fill="${shapeColor}" />`;
+            shapeSvg = `<rect x="75" y="50" width="150" height="100"`;
             break;
         default:
             console.log('Invalid shape.');
