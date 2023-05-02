@@ -27,7 +27,11 @@ describe('LogoGeneratorTests', () => {
     });
 
     describe('shape color', () => {
-        it('')
+        it('should be a valid keyword color or hexidecimal value', () => {
+            const shapeColor = 'blue';
+            const logoGenerator = new LogoGenerator;
+            expect(logoGenerator.shapeColor(shapeColor)).toBeTruthy();
+        })
     })
 
 });

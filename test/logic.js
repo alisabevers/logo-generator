@@ -180,4 +180,21 @@ LogoGenerator.prototype.shapeChoice = (shape) => {
     }
 };
 
+LogoGenerator.prototype.shapeColor = (color) => {
+    if(color.length === 7 && color[0] === '#') {
+        for(let i = 1; i < 7; i++) {            
+            if(!hexidecimal.includes(color[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    if(colorChoices.includes(color)) {
+        return true;
+    } 
+
+    return false;
+};
+
 module.exports = LogoGenerator;
