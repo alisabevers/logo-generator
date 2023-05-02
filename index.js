@@ -29,16 +29,29 @@ inquirer
         name: 'shapeColor',
     }
 ])
-.then(({
-    chars,
-    textColor,
-    shape,
-    shapeColor
-}) => {const template = 
-
+// <${shape} cx="150" cy="100" r="80" fill="${shapeColor}" />
+// <${shape} polygon points="150, 18 244, 182 56, 182" fill="${shape.color}" />
+// <${shape} rect x="90" y="40" width="120" height="120" fill="${shape.color}" />
+.then(({ chars, textColor, shape, shapeColor }) => {
+    switch (shape) {
+        case 'circle':
+            shapeSvg = `<circle cx="150" cy="100" r="80" fill="${shapeColor}" />`;
+            break;
+        case 'triangle':
+            shapeSvg = `<polygon points="75,25 25,175 175,175" fill="${shapeColor}" />`;
+            break;
+        case 'square':
+            shapeSvg = `<rect x="75" y="50" width="150" height="100" fill="${shapeColor}" />`;
+            break;
+        default:
+            console.log('Invalid shape.');
+            return;
+    }
+    
+const template =
 `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
-<${shape} cx="150" cy="100" r="80" fill="${shapeColor}" />
+<${shape} ${shapeSvg} fill="${shapeColor}" />
 
 <text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${chars}</text>
 
