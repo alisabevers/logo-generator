@@ -1,12 +1,33 @@
 const LogoGenerator = require('./logic.js');
 
-describe('LogoGenerator', () => {
-    describe('length', () => {
-        it('should throw an error if the length is greater than 3 chars'), () => {
-            const chars = "abcd";
-            const LogoGenerator = new LogoGenerator;
-            const errorMsg = "Please enter a max of 3 characters"
-            expect(LogoGenerator.charLength(chars)).toThrow(errorMsg);
-        };
+describe('LogoGeneratorTests', () => {
+
+    describe('char length', () => {
+        it('should be valid if the length is less than 4 chars', () => {
+            const chars = "abc";
+            const logoGenerator = new LogoGenerator;
+            expect(logoGenerator.charLength(chars)).toBeTruthy();
+        });
     });
+
+    describe('text color', () => {
+        it('should be a valid keyword color or hexidecimal value', () => {
+            const colorInput = '#FF0033';
+            const logoGenerator = new LogoGenerator;
+            expect(logoGenerator.charColor(colorInput)).toBeTruthy();
+        });
+    });
+
+    describe('shape', () => {
+        it('should be a valid shape if either circle, triangle, or square is selected', () => {
+            const shapeChoice = 'triangle';
+            const logoGenerator = new LogoGenerator;
+            expect(logoGenerator.shapeChoice(shapeChoice)).toBeTruthy();
+        });
+    });
+
+    describe('shape color', () => {
+        it('')
+    })
+
 });
