@@ -6,7 +6,7 @@ This was an assignment from my coding bootcamp, which did not come with any star
 * The user inputs are saved and used to generated a logo via SVG file
 * The SVG file creates a 300x200px image that matches the user criteria
 
-Click on this [link](https://drive.google.com/file/d/18NCbAKI-gdgKTng0iy-vkm5LCDRcpnDC/view) to see a live demo of a README file being generated.
+Click on this [link](https://drive.google.com/file/d/1XjidPsWUOyuRNRDpZ3Lj62R_y64XDSfU/view) to see a live demo of a README file being generated.
 
 ## Installation
 You will need the following NPM libraries for this to run: 
